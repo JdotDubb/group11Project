@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'notes/index' 
+  get 'notes/classListing1'
   
   resources :notes
   
