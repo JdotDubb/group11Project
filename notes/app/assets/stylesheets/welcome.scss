@@ -2,7 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+h1 {
+    color: black;
+    font-size: 60px;
+    
+}
 body {
-  
+  background-color: #046A38;
+}
+div{
+  color: white;
+  width: 120px;
+  background-color: #046A38;
+  padding: 20px;
+  border: none;
+  border-radius: 4px;
+  margin-left: 550px;
+  cursor: pointer;
+  font-size: 13pt;
+}
+
+section{
+  background-color: white;
+  text-align: center;
+  margin-top: 70px;
+  margin-left: 180px;
+  margin-right: 180px;
+  padding-top: 50px;
+  padding-bottom: 190px;
+}
+div section
+{
+ text-decoration: none;
 }
