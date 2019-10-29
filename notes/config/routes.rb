@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'notes/index' 
   get 'notes/class1'
-  get 'notes/createNotes'
+  get 'notes/class1Notes'
   
   resources :notes
   
