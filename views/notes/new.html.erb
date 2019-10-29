@@ -1,0 +1,22 @@
+<h1>New Note</h1>
+<br>
+<p>Please add your new note below and just click "Submit", its that simple</p>
+
+<h1>Your Note</h1>
+
+ <%= form_for :notes, url: notes_path do |f| %>
+ <p>
+    <%= f.label :title %>
+    <br>
+    <%= f.text_field :title %>
+ </p>
+    
+<p> 
+    <%= f.label :text %>
+    <br>
+    <%= f.text_area :text %>
+</p>
+    
+    <%= f.submit %>
+  <% end %>
+  <a href="class1">Back</a>
