@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+select[name="course"]{
+    position: relative;
+    top:-50px;
+    right: -170px;
+    height:40px;
+   
+}
