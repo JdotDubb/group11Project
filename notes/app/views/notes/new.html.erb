@@ -7,19 +7,35 @@
 <h1 class="x">Your Note</h1>
 
     <%= form_for :notes, url: notes_path do |f| %>
- <p class="x">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
- </p>
-    <br><br>
-<p class="x"> 
-    <%= f.label :text %>
-    <%= f.text_area :text%>
-</p>
-    <br>
-    <%= f.submit %>
+  <% if @note.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@note.errors.count, "error") %> kept us from saving your note:
+      </h2>
+      <ul>
+        <% @note.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
   <% end %>
-<br>
  
-  <a href="class1" class="x">Back</a>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
+
+ 
+  <a href="index">Back</a>
   </div>
