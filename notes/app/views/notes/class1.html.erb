@@ -1,4 +1,4 @@
-<h1>This will be the page that shows the users notes and provides access to their note actions</h1>
+<h1>Your note dashboard</h1>
 <br>
 <br>
 <strong>Click here to make a new notes.</strong>
@@ -6,20 +6,21 @@
 <%= link_to 'New note', new_note_path %>
 <Br>
 <br>
-<strong>My Notes</strong>
+<h2>My Notes</h2>
+<table>
+    <tr>
+        <th>Title of Note</th>
+        <th>Note</th>
+    </tr>
+    <% @note.each do |note| %>
+    <tr>
+        <td><%= note.title %></td>
+        <td><%= note.text %></td>
+        <td><%= link_to 'Show', note_path(note) %></td>
+    </tr>
+    <% end %>
+</table>
 <br>
-<strong>USER NOTES</strong>(ACTIONS)
-<br>
-<strong>USER NOTES</strong>(ACTIONS)
-<br>
-<strong>USER NOTES</strong>(ACTIONS)
-<br>
-<strong>USER NOTES</strong>(ACTIONS)
-<br>
-<br>
-<br>
-<br>
-
 <a href="class1Notes">View class notes</a>
 <a href="index">Home</a>
 
