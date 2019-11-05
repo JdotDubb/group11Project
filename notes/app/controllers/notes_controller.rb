@@ -21,6 +21,20 @@ class NotesController < ApplicationController
             render 'new'
         end
     end
+    
+    def edit
+        @note = Note.find(params[:id])
+    end
+    
+    def update
+        @note = Note.find(params[:id])
+        
+        if @note.update(note_params)
+            redirect_to @note
+        else
+            render 'edit'
+        end
+    end
 end
 
 private 

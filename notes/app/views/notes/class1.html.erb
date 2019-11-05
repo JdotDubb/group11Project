@@ -17,12 +17,13 @@
         <td><%= note.title %></td>
         <td><%= note.text %></td>
         <td><%= link_to 'Show', note_path(note) %></td>
+        <td><%= link_to 'Edit', edit_note_path(note) %></td>
     </tr>
     <% end %>
 </table>
 <br>
-<a href="class1Notes">View class notes</a>
-<a href="index">Home</a>
+<%= link_to 'Home', notes_index_path %>
+<%= link_to 'Class Notes', notes_class1Notes_path %>
 
 
 
