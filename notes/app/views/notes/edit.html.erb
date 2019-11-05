@@ -1,6 +1,6 @@
 <h1>Edit Your Note</h1>
  
-<%= form_for :note, url: notes_path(@note), method: :patch do |f| %>
+<%= form_for :notes, url: notes_path(@note), method: :patch do |f| %>
  
   <% if @note.errors.any? %>
     <div id="error_explanation">
