@@ -1,19 +1,15 @@
 <h1>This page will just DISPLAY a bunch of the class's notes that you can VIEW only</h1>
 <br>
 <br>
-<strong>Class Notes</strong>
-<br>
-<br>
+<h2>Class Notes</h2>
 <br>
 <table>
     <tr>
         <th>Title of Note</th>
-        <th>Note</th>
     </tr>
-    <% @note.each do |note| %>
+    <% @notes.each do |note| %>
     <tr>
         <td><%= note.title %></td>
-        <td><%= note.text %></td>
         <td><%= link_to 'Show', note_path(note) %></td>
         <td><%= link_to 'Edit', edit_note_path(note) %></td>
         
@@ -25,4 +21,5 @@
     </tr>
     <% end %>
 </table>
-<%= link_to 'Class 1', notes_class1_path %>
+<br>
+<%= link_to 'Back', notes_class1_path %>

@@ -10,12 +10,10 @@
 <table>
     <tr>
         <th>Title of Note</th>
-        <th>Note</th>
     </tr>
     <% @notes.each do |note| %>
     <tr>
         <td><%= note.title %></td>
-        <td><%= note.text %></td>
         <td><%= link_to 'Show', note_path(note) %></td>
         <td><%= link_to 'Edit', edit_note_path(note) %></td>
         
@@ -29,6 +27,7 @@
 </table>
 <br>
 <%= link_to 'Home', notes_index_path %>
+<br>
 <%= link_to 'Class Notes', notes_class1Notes_path %>
 
 
