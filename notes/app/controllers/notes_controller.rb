@@ -1,11 +1,11 @@
 class NotesController < ApplicationController
     
     def class1
-        @note = Note.all
+        @notes = Note.all
     end
     
     def class1Notes
-        @note = Note.all
+        @notes = Note.all
     end
 
     def show 
@@ -30,14 +30,14 @@ class NotesController < ApplicationController
         @note = Note.find(params[:id])
     end
     
-    def update
-        @note = Note.find(params[:id])
+    def update 
+        @note = Note.find(params[:id]) 
         
-        if @note.update(note_params)
-            redirect_to @note
-        else
-            render 'edit'
-        end
+        if @note.update(note_params) 
+            redirect_to @note 
+        else 
+                render 'edit' 
+        end 
     end
     
     def destroy 
@@ -51,6 +51,6 @@ end
 
 private 
     def note_params
-        params.require(:notes).permit(:title, :text)
+        params.require(:note).permit(:title, :text)
 
     end
