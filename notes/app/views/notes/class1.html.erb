@@ -10,26 +10,24 @@
 <table>
     <tr>
         <th>Title of Note</th>
-        <th>Note</th>
     </tr>
-    <% @note.each do |note| %>
+    <% @notes.each do |note| %>
     <tr>
         <td><%= note.title %></td>
-        <td><%= note.text %></td>
         <td><%= link_to 'Show', note_path(note) %></td>
-        <td><%= link_to 'Edit', edit_note_path(note) %></td>
         <td><%= link_to 'Edit', edit_note_path(note) %></td>
         
         <td><%= link_to 'Delete', 
                                     note_path(note),
                                     method: :delete,
-                                    data: {confirm: 'Do you want to delete?'} %></td>
+                                    data: {confirm: 'Sure you want to toss it?'} %></td>
         
     </tr>
     <% end %>
 </table>
 <br>
 <%= link_to 'Home', notes_index_path %>
+<br>
 <%= link_to 'Class Notes', notes_class1Notes_path %>
 
 
