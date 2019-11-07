@@ -1,41 +1,10 @@
-<div id="c">
+
 <h1 class="x">New Note</h1>
 <br>
 <p class="x">Please add your new note below and just click "Submit", its that simple</p><br><br>
 
 
-<h1 class="x">Your Note</h1>
+<%= render 'form' %>
 
-    <%= form_for :notes, url: notes_path do |f| %>
-  <% if @note.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@note.errors.count, "error") %> kept us from saving your note:
-      </h2>
-      <ul>
-        <% @note.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
- 
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
- 
-  <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
- 
-<% end %>
-
- 
-  <%= link_to 'Class 1', notes_class1_path %>
-  </div>
+<%= link_to 'Back', notes_class1_path %>
+  

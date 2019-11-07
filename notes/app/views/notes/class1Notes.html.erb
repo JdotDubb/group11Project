@@ -1,12 +1,25 @@
-<!--<h1>This page will just DISPLAY a bunch of the class's notes that you can VIEW only</h1>-->
-<section>
-    <br>
-    <br>
-    <strong><h2>Class Notes</h2></strong>
-    <br>
-    <br>
-    <br>
-
-    <button class="b"><%= link_to 'Class 1', notes_class1_path %></button>
-
-</section>
+<h1>This page will just DISPLAY a bunch of the class's notes that you can VIEW only</h1>
+<br>
+<br>
+<h2>Class Notes</h2>
+<br>
+<table>
+    <tr>
+        <th>Title of Note</th>
+    </tr>
+    <% @notes.each do |note| %>
+    <tr>
+        <td><%= note.title %></td>
+        <td><%= link_to 'Show', note_path(note) %></td>
+        <td><%= link_to 'Edit', edit_note_path(note) %></td>
+        
+        <td><%= link_to 'Delete', 
+                                    note_path(note),
+                                    method: :delete,
+                                    data: {confirm: 'Do you want to delete?'} %></td>
+        
+    </tr>
+    <% end %>
+</table>
+<br>
+<%= link_to 'Back', notes_class1_path %>
