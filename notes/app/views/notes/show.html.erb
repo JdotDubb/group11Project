@@ -1,11 +1,12 @@
-<p>
-  <strong>Note Title:</strong>
+  <h1 id="title">
+  <strong>Title:</strong>
   <%= @note.title %>
-</p>
+</h1>
  
-<p>
-  <strong>Note:</strong>
+<p id="note">
   <%= @note.text %>
 </p>
 
-<%= link_to 'Back', notes_class1_path %>
+<div id="link"><%= link_to 'Back', notes_class1_path %></div>
+
+
