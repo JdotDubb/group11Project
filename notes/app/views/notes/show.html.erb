@@ -1,11 +1,12 @@
-<p>
-  <strong>Note Title:</strong>
+  <h1 id="title">
   <%= @note.title %>
-</p>
+</h1>
  
-<p>
-  <strong>Note:</strong>
+<p id="note"><!--I made the background of this white. It makes it look stupid with so little text, but if you imagine it with a whole
+bunch of text like a class' notes would be it seems ok. signed Zachary Martin--->
   <%= @note.text %>
 </p>
 
-<%= link_to 'Back', notes_class1_path %>
+<button id="link"><%= link_to 'Back', notes_class1_path %></button>
+
+
