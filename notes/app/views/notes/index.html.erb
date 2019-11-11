@@ -1,10 +1,23 @@
 <h1>Welcome to cNotes.</h1>
-<h2>Select your class below</h2>
 <br>
-<h2>Select your class</h2><select name="course">
+<br>
+<h2>Only registered users may comment or make notes. Please sign up or login for full access!</h2>
+<br>
+<!--<h2>Select your class</h2><select name="course">
     <option>Lorem</option>
     <option value="Ipsum">Ipsum</option>
-</select>
+</select>-->
+<% if current_user %>
+    Logged in as <%= current_user.name %>
+    <%= link_to "Log Out", logout_path %>
+    
+    <% else %>
+    <button id = 'button'><%= link_to "Sign Up!", signup_path %></button> or
+    <button id = 'button'><%= link_to "Log In", login_path %></button>
+    <% end %>
+    <br>
+    <br>
+    <h2>Here are the classes available</h2>
 <p>
     <button id = 'button'><%= link_to 'Software Engineering', notes_class1_path %></button><!--TODO put this in the dropdown-->
     <br>
