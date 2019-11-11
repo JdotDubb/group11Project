@@ -9,19 +9,33 @@
 </select>-->
 <% if current_user %>
     Logged in as <%= current_user.name %>
+        
+
     <%= link_to "Log Out", logout_path %>
+    <br>
+    <br>
+    <h2>Visit your dashboard for more</h2>
+    <p>
+    <button id = 'button'><%= link_to 'My Dashboard', notes_class1_path %></button><!--TODO put this in the dropdown-->
+    <br>
+</p>
     
     <% else %>
     <button id = 'button'><%= link_to "Sign Up!", signup_path %></button> or
     <button id = 'button'><%= link_to "Log In", login_path %></button>
     <% end %>
-    <br>
-    <br>
-    <h2>Here are the classes available</h2>
+    
+    
+      <h2>Here are the classes available</h2>
+
 <p>
-    <button id = 'button'><%= link_to 'Software Engineering', notes_class1_path %></button><!--TODO put this in the dropdown-->
+
+    <button id = 'button'><%= link_to 'Software Engineering', notes_class1Notes_path %></button><!--TODO put this in the dropdown-->
+
     <br>
+
 </p>
+
 
 <!--to put the link in the dropdown just put the following in the dropdown:
 <option value="Software Engineering"><a href="class1">Software Engineering</a></option>
