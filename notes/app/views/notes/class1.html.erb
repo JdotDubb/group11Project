@@ -1,13 +1,13 @@
-<h1 id="idk">Your notes dashboard</h1>
+<center><h1 id="idk">Your notes dashboard</h1></center>
 
-<div id="newNote">
+<center><div id="newNote">
     <button id="addNote"><%= link_to '+', new_note_path %></button>
 <br>
 <strong id="something">Create Note</strong>
 </div>
+</center>
 <br>
-<br>
-<br>
+<section>
 <h1>My Notes</h1>
 <div id="cente">
     <table>
@@ -17,17 +17,21 @@
     <% @notes.each do |note| %>
     <tr>
         <td id="text2"><%= note.title %></td>
-        <td><%= link_to 'Show', note_path(note) %></td>
-        <td><%= link_to 'Edit', edit_note_path(note) %></td>
+        <td><div id="buttonCRUD"><%= link_to 'Show', note_path(note) %></div></td>
+        <td><div id="buttonCRUD"><%= link_to 'Edit', edit_note_path(note) %></div></td>
         
-        <td><%= link_to 'Delete', 
+        <td><div id="buttonCRUD"><%= link_to 'Delete', 
                                     note_path(note),
                                     method: :delete,
-                                    data: {confirm: 'Sure you want to toss it?'} %></td>
+                                    data: {confirm: 'Sure you want to toss it?'} %></div></td>
         
     </tr>
     <% end %>
 </table>
+</div>
+</section>
+<br>
+<br>
 <br>
 <button id= 'button'><%= link_to 'Home', notes_index_path %></button>
 <br>
