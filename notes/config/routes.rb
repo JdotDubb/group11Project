@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   get 'sessions/new'
   get 'sessions/create'
   get 'sessions/destroy'
+  
   resources :users
+  
   get 'notes/index' 
   get 'notes/class1'
   get 'notes/class1Notes'
