@@ -9,17 +9,18 @@ h1 {
 }
 body {
   background-color: #add8e6;
+  margin-top: 20px;
 }
-div{
+div #loginB{
   color: white;
   width: 120px;
-  background-color: #046A38;
+  background-color: #4CAF50;
   padding: 20px;
   border: none;
   border-radius: 4px;
-  margin-left: 550px;
   cursor: pointer;
   font-size: 13pt;
+  text-decoration: none;
 }
 
 section{
