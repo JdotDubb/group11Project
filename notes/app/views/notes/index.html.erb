@@ -1,16 +1,45 @@
-<h1>This will be the user homepage once logged in. It will show the class to select to see notes.</h1>
+<h1>Welcome to cNotes.</h1>
 <br>
-<h2>Select your class</h2><select name="course">
-    <option value="lorem">Lorem</option>
+<br>
+<h2>Only registered users may make notes. Please sign up or login for full access!</h2>
+<br>
+<!--<h2>Select your class</h2><select name="course">
+    <option>Lorem</option>
     <option value="Ipsum">Ipsum</option>
-</select>
-<p>
-    <%= link_to 'Class 1', notes_class1_path %><!--TODO put this in the dropdown-->
+</select>-->
+<% if current_user %>
+    Logged in as <%= current_user.name %>
+        
+    <%= link_to "Log Out", logout_path %>
+    <br>
+    <br>
+    <h2>Visit your dashboard for more</h2>
+    <p>
+    <button id = 'button'><%= link_to 'My Dashboard', notes_class1_path %></button><!--TODO put this in the dropdown-->
     <br>
 </p>
+    
+    <% else %>
+    <button id = 'button'><%= link_to "Sign Up!", signup_path %></button> or
+    <button id = 'button'><%= link_to "Log In", login_path %></button>
+    <% end %>
+    
+    
+      <h2>Here are the classes available</h2>
+
+<p>
+
+    <button id = 'button'><%= link_to 'Software Engineering', notes_class1Notes_path %></button><!--TODO put this in the dropdown-->
+
+    <br>
+
+</p>
+
 
 <!--to put the link in the dropdown just put the following in the dropdown:
 <option value="Software Engineering"><a href="class1">Software Engineering</a></option>
-the only thing left after that is to make something happen so that you will get to its notes page. maybe by the click of a submit button?-->
+the only thing left after that is to make something happen so that you will get to its notes page. maybe by the click of a submit button?
+https://api.rubyonrails.org/classes/ActionView/Helpers/FormTagHelper.html#method-i-select_tag
+-->
 
 
