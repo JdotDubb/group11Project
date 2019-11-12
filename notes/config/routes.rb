@@ -13,7 +13,9 @@ Rails.application.routes.draw do
   get 'notes/class1'
   get 'notes/class1Notes'
   
-  resources :notes
+  resources :notes do
+    resources :comments
+  end
   
   root 'welcome#login'
 

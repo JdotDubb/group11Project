@@ -7,6 +7,35 @@ bunch of text like a class' notes would be it seems ok. signed Zachary Martin---
   <%= @note.text %>
 </p>
 
+<h2>Comments</h2>
+<% @note.comments.each do |comment| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
+ 
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+
+<h2>Add a comment:</h2>
+<%= form_for([@note, @note.comments.build]) do |f| %>
+  <p>
+    <%= f.label :commenter %><br>
+    <%= f.text_field :commenter %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+
 <button id="button"><%= link_to 'Home', notes_index_path %></button>
 
 
