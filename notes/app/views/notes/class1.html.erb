@@ -14,7 +14,7 @@
     <tr>
         <th id="text1">Title</th>
     </tr>
-    <% @notes.each do |note| %>
+    <% @notes.each  do |note| %>
     <tr>
         <td id="text2"><%= note.title %></td>
         <td><div id="buttonCRUD"><%= link_to 'Show', note_path(note) %></div></td>
