@@ -9,17 +9,26 @@ h1 {
 }
 body {
   background-color: #add8e6;
+  margin-top: 20px;
 }
+
+div #loginB{
+  color: white;
+  width: 120px;
+  background-color: #4CAF50;
+=======
 
 div{
   color: white;
   width: 120px;
+
   padding: 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 13pt;
-  
+
+  text-decoration: none;
 }
 
 section{
