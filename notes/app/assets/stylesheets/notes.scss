@@ -9,7 +9,15 @@ section h2{
 
 
 input[type=text]{
-    width: 50%;
+    width: 100;
+    padding: 12px 12px;
+    border: 2px solid #ccc;
+    background-color: #e7e7e7;
+    border-radius: 12px;
+}
+
+input[type=password]{
+    width: 100%;
     padding: 12px 12px;
     border: 2px solid #ccc;
     background-color: #e7e7e7;
@@ -56,9 +64,6 @@ button {
     font-size: 200px;
 }
 
-#idk{
-    text-align:center;
-}
 
 #something{
     color:black;
@@ -76,9 +81,6 @@ button {
     color:black;
 }
 
-#title,#note,#edit{
-    text-align:center;
-}
 
 #link{
     position:relative;
@@ -99,4 +101,10 @@ button {
 
 #edit{
     color:black;
+}
+
+#title,#note,#edit{
+
+    text-align:center;
+
 }
