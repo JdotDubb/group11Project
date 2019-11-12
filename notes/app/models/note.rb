@@ -1,7 +1,7 @@
 class Note < ApplicationRecord
-    has_many :comments
-    belongs_to :user
     
+    belongs_to :user
+    has_many :comments
     validates :title, presence: true
     validates :text, presence: true, length: {minimum: 5 }
 end
