@@ -1,3 +1,4 @@
+<!--Why is this page so wide now?---->
 <h1 id="welcome">Welcome to cNotes.</h1>
 <br>
 <br>
@@ -5,14 +6,14 @@
 <br>
 
 <% if current_user %>
-    Logged in as <%= current_user.name %>
+    <div name="loggedIn">Logged in as <%= current_user.name %>
         
-    <%= link_to "Log Out", logout_path %>
+    <%= link_to "Log Out", logout_path %></div><!--why is the layout of the text like that? The out should be on the same line as log->
     <br>
     <br>
     <h2 class="toCenter">Visit your dashboard for more</h2>
     <p>
-    <button id = 'button'><%= link_to 'My Dashboard', notes_class1_path %></button>
+    <button id = 'button' name="myDashboard"><%= link_to 'My Dashboard', notes_class1_path %></button>
     <br>
 </p>
     
@@ -26,7 +27,7 @@
 
 <p>
 
-    <button id = 'button'><%= link_to 'Software Engineering', notes_class1Notes_path %></button>
+    <button id = 'button' name="SE"><%= link_to 'Software Engineering', notes_class1Notes_path %></button>
 
     <br>
 
