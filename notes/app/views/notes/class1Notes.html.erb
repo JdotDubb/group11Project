@@ -1,31 +1,22 @@
-
-<section class = "new">
+<section>
+<center><h1>Software Engineering</h1></center>
 <center><h2>Class Notes</h2></center>
 <br>
-<center><table>
-
-<center><h1>Software Engineering</h1></center>
 <br>
-<section>
-<table id="table">
-
+    <div id="cente">
+    <table>
     <tr>
-        <th id="header">Title of Note</th>
+        <th id="text1">Notes</th>
     </tr>
-    <% @notes.each do |note| %>
+    <% @notes.each  do |note| %>
     <tr>
-        <td><%= note.title %></td>
-        <td><%= link_to 'Show', note_path(note) %></td>
-        
-        
+        <td id="text2"><%= note.title %></td>
+        <td><div id="buttonCRUD"><%= link_to 'Show', note_path(note) %></div></td>
     </tr>
     <% end %>
-
-</table></center>
 <br>
-</section>
-
 </table>
+</div>
 </section>
 <br>
 <button id = 'button' name='home'><%= link_to 'Home', notes_index_path %></button>
