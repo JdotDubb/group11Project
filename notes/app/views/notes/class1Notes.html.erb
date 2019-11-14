@@ -7,10 +7,10 @@
 <center><h1>Software Engineering</h1></center>
 <br>
 <section>
-<table>
+<table id="table">
 
     <tr>
-        <th>Title of Note</th>
+        <th id="header">Title of Note</th>
     </tr>
     <% @notes.each do |note| %>
     <tr>
@@ -28,5 +28,5 @@
 </table>
 </section>
 <br>
-<button id = 'button'><%= link_to 'Home', notes_index_path %></button>
+<button id = 'button' name='home'><%= link_to 'Home', notes_index_path %></button>
 

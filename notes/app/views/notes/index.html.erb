@@ -1,21 +1,19 @@
-<h1>Welcome to cNotes.</h1>
+<!--Why is this page so wide now?---->
+<h1 id="welcome">Welcome to cNotes.</h1>
 <br>
 <br>
-<h2>Only registered users may make notes. Please sign up or login for full access!</h2>
+<h2 id="register">Only registered users may make notes. Please sign up or login for full access!</h2>
 <br>
-<!--<h2>Select your class</h2><select name="course">
-    <option>Lorem</option>
-    <option value="Ipsum">Ipsum</option>
-</select>-->
+
 <% if current_user %>
-    Logged in as <%= current_user.name %>
+    <div name="loggedIn">Logged in as <%= current_user.name %>
         
-    <%= link_to "Log Out", logout_path %>
+    <%= link_to "Log Out", logout_path %></div><!--why is the layout of the text like that? The out should be on the same line as log-->
     <br>
     <br>
-    <h2>Visit your dashboard for more</h2>
+    <h2 class="toCenter">Visit your dashboard for more</h2>
     <p>
-    <button id = 'button'><%= link_to 'My Dashboard', notes_class1_path %></button><!--TODO put this in the dropdown-->
+    <button id = 'button' name="myDashboard"><%= link_to 'My Dashboard', notes_class1_path %></button>
     <br>
 </p>
     
@@ -25,21 +23,16 @@
     <% end %>
     
     
-      <h2>Here are the classes available</h2>
+      <h2 class="toCenter">Here are the classes available</h2>
 
 <p>
 
-    <button id = 'button'><%= link_to 'Software Engineering', notes_class1Notes_path %></button><!--TODO put this in the dropdown-->
+    <button id = 'button' name="SE"><%= link_to 'Software Engineering', notes_class1Notes_path %></button>
 
     <br>
 
 </p>
 
 
-<!--to put the link in the dropdown just put the following in the dropdown:
-<option value="Software Engineering"><a href="class1">Software Engineering</a></option>
-the only thing left after that is to make something happen so that you will get to its notes page. maybe by the click of a submit button?
-https://api.rubyonrails.org/classes/ActionView/Helpers/FormTagHelper.html#method-i-select_tag
--->
 
 
