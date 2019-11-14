@@ -7,23 +7,12 @@ bunch of text like a class' notes would be it seems ok. signed Zachary Martin---
   <%= @note.text %>
 </p>
 
-<h2>Comments</h2>
-<% @note.comments.each do |comment| %>
-  <p>
-    <strong>Commenter:</strong>
-    <%= comment.commenter %>
-  </p>
- 
-  <p>
-    <strong>Comment:</strong>
-    <%= comment.body %>
-  </p>
-<% end %>
-
-<h2>Add a comment:</h2>
+<section>
+ <% if current_user %>
+ <h2>Have feedback?</h2>
 <%= form_for([@note, @note.comments.build]) do |f| %>
   <p>
-    <%= f.label :commenter %><br>
+    <%= f.label :name %><br>
     <%= f.text_field :commenter %>
   </p>
   <p>
@@ -33,9 +22,36 @@ bunch of text like a class' notes would be it seems ok. signed Zachary Martin---
   <p>
     <%= f.submit %>
   </p>
+  </section>
+  
+  <section>
+<h2>Talk about it</h2>
+<br>
+<% @note.comments.each do |comment| %>
+  <p>
+    <strong>User:</strong>
+    <%= comment.commenter %>
+  </p>
+ 
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+  <p>-----------------------------------</p>
+<% end %>
+</section>
 <% end %>
 
-
-<button id="button"><%= link_to 'Home', notes_index_path %></button>
+    <% else %>
+    
+    <h2 id="register">Only registered users may make or read comments. Please sign up or login for full access!</h2>
+    
+        <button id = 'button'><%= link_to "Sign Up!", signup_path %></button> or
+        <button id = 'button'><%= link_to "Log In", login_path %></button>
+        
+    <% end %>
+</section>
+<br>
+<button id= 'button' name="homealone"><%= link_to 'Home', notes_index_path %></button>
 
 
