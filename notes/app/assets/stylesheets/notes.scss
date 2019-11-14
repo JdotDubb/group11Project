@@ -16,7 +16,7 @@ section h2{
 
 
 input[type=text]{
-    width: 100;
+    width: 50%;
     padding: 12px 12px;
     border: 2px solid #ccc;
     background-color: #e7e7e7;
@@ -24,7 +24,7 @@ input[type=text]{
 }
 
 input[type=password]{
-    width: 100%;
+    width: 50%;
     padding: 12px 12px;
     border: 2px solid #ccc;
     background-color: #e7e7e7;
@@ -51,6 +51,7 @@ input[type=button], input[type=submit]{
     cursor: pointer;
     border-radius: 8px;
 }
+
 
 button {
 
@@ -93,6 +94,7 @@ button {
 
 #cente{
     text-align:center;
+    left:400px;
     
 }
 
