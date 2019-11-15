@@ -1,4 +1,4 @@
-<center><h1 id="idk">Your notes dashboard</h1></center>
+<center><h1 id="idk">My dashboard</h1></center>
 
 <center><div id="newNote">
     <button id="addNote"><%= link_to '+', new_note_path %></button>
@@ -14,12 +14,11 @@
     <tr>
         <th id="text1">Title</th>
     </tr>
-    <% @notes.each  do |note| %>
+    <% @notes.each do |note| %>
     <tr>
         <td id="text2"><%= note.title %></td>
         <td><div id="buttonCRUD"><%= link_to 'Show', note_path(note) %></div></td>
         <td><div id="buttonCRUD"><%= link_to 'Edit', edit_note_path(note) %></div></td>
-        
         <td><div id="buttonCRUD"><%= link_to 'Delete', 
                                     note_path(note),
                                     method: :delete,
