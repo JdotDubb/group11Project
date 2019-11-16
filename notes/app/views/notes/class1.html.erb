@@ -15,6 +15,7 @@
         <th id="text1">Title</th>
     </tr>
     <% @notes.each do |note| %>
+    <% if note.user_id == current_user.id %>
     <tr>
         <td id="text2"><%= note.title %></td>
         <td><div id="buttonCRUD"><%= link_to 'Show', note_path(note) %></div></td>
@@ -25,6 +26,7 @@
                                     data: {confirm: 'Sure you want to toss it?'} %></div></td>
         
     </tr>
+    <% end %>
     <% end %>
 </table>
 </div>
