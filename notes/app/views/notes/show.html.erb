@@ -38,6 +38,15 @@ bunch of text like a class' notes would be it seems ok. signed Zachary Martin---
     <strong>Comment:</strong>
     <%= comment.body %>
   </p>
+  
+  <p>
+  <%= link_to 'Delete Comment', [comment.note, comment],
+                                method: :delete,
+                                data: { confirm: 'Are you sure you want to delete?' } %></td>
+
+
+
+</p>
   <p>-----------------------------------</p>
 <% end %>
 </section>
