@@ -1,11 +1,39 @@
+  <h1 id="title">
+  <%= @note.title %>
+</h1>
+ 
+<p id="note"><!--I made the background of this white. It makes it look stupid with so little text, but if you imagine it with a whole
+bunch of text like a class' notes would be it seems ok. signed Zachary Martin--->
+  <%= @note.text %>
+</p>
+
 <p>
-  <strong>Note Title:</strong>
+  <strong>Title:</strong>
   <%= @note.title %>
 </p>
  
 <p>
-  <strong>Note:</strong>
+  <strong>Text:</strong>
   <%= @note.text %>
 </p>
 
-<%= link_to 'Class 1', notes_class1_path %>
+
+
+<%= form_for([@note, @note.comments.build]) do |f| %>
+  <p>
+    <%= f.label :commenter %><br>
+    <%= f.text_field :commenter %>
+  </p>
+  
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<button id= 'button'><%= link_to 'Home', notes_index_path %></button>
+
+#<button id = 'button' name='home'><%= link_to 'Home', notes_index_path %></button>

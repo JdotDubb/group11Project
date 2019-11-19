@@ -1,41 +1,13 @@
-<div id="c">
-<h1 class="x">New Note</h1>
+<h1>New Note</h1>
 <br>
-<p class="x">Please add your new note below and just click "Submit", its that simple</p><br><br>
+<p><h3>Please add your new note below and just click "Submit", its that simple</h3></p>
+<br>
+Make sure to include a title for your note! Notes must be atleast 5 characters so be sure to include as much as you can.
+<br>
+Remember you're sharing this note with your classmates so make it count!
+<br>
+<br>
+<%= render 'form' %>
 
-
-<h1 class="x">Your Note</h1>
-
-    <%= form_for :notes, url: notes_path do |f| %>
-  <% if @note.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@note.errors.count, "error") %> kept us from saving your note:
-      </h2>
-      <ul>
-        <% @note.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
- 
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
- 
-  <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
- 
-<% end %>
-
- 
-  <%= link_to 'Class 1', notes_class1_path %>
-  </div>
+<button id= 'button'><%= link_to 'Home', notes_index_path %></button>
+  

@@ -1,9 +1,32 @@
-<h1>This page will just DISPLAY a bunch of the class's notes that you can VIEW only</h1>
-<br>
-<br>
-<strong>Class Notes</strong>
-<br>
-<br>
-<br>
 
-<%= link_to 'Class 1', notes_class1_path %>
+<section class = "new">
+<center><h2>Class Notes</h2></center>
+<br>
+<center><table>
+
+<center><h1>Software Engineering</h1></center>
+<br>
+<section>
+<table id="table">
+
+    <tr>
+        <th id="header">Title of Note</th>
+    </tr>
+    <% @notes.each do |note| %>
+    <tr>
+        <td><%= note.title %></td>
+        <td><%= link_to 'Show', note_path(note) %></td>
+        
+        
+    </tr>
+    <% end %>
+
+</table></center>
+<br>
+</section>
+
+</table>
+</section>
+<br>
+<button id = 'button' name='home'><%= link_to 'Home', notes_index_path %></button>
+
