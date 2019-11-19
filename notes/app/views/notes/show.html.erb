@@ -7,7 +7,6 @@ bunch of text like a class' notes would be it seems ok. signed Zachary Martin---
   <%= @note.text %>
 </p>
 
-
 <p>
   <strong>Title:</strong>
   <%= @note.title %>
@@ -19,12 +18,6 @@ bunch of text like a class' notes would be it seems ok. signed Zachary Martin---
 </p>
 
 
-<h2>Comments</h2>
-<%= render @note.comments %>
-
-
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
 
 <%= form_for([@note, @note.comments.build]) do |f| %>
   <p>
