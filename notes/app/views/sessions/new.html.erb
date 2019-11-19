@@ -1,18 +1,24 @@
-<p id="alert"><%= alert %></p>
-    <center>
+<section>
+    <p id="alert"><%= alert %></p>
     <h1>cNotes - Login</h1>
+    
     <%= form_tag sessions_path do |form| %>
-    <div class= "field">
+    
+        <br>
+        <br>
         <%= label_tag :email %>
         <%= text_field_tag :email %>
-    </div>
-    <div class="field">
+    
+        <br>
+        <br>
         <%= label_tag :password %>
         <%= password_field_tag :password %>
-    </div>
-    <div class="actions">
+
+        <br>
+        <br>
         <%= submit_tag "Login!" %>
-        </center>
-    </div>
+
+
     
     <% end %>
+    </section>
