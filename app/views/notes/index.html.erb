@@ -1,7 +1,7 @@
 <!--Why is this page so wide now?---->
 <section>
 <h1 id="welcome">cNotes</h1>
-<h2><i>Share your class notes with other students</i></h2>
+
 <br>
 <br>
 <br>
@@ -17,23 +17,18 @@
     <button id = 'button' name="myDashboard"><%= link_to 'My Dashboard', notes_class1_path %></button>
     <br>
     <% else %>
-    <h2 id="register">Sign up or Login to share your notes...or</h2>
+    <h2 id="register">Sign up or Login to share your notes</h2>
         <button id = 'button'><%= link_to "Sign Up!", signup_path %></button> 
         <button id = 'button'><%= link_to "Log In", login_path %></button>
-        
     <% end %>
-    <br>
-    <br>
-    <p>---------------------------------------------</p>
 </p>
+
+<p>---------------------------------------------------------------</p>
       <h2 class="toCenter">Available Classes</h2>
-
-<p>
-
-    <button id = 'button' name="SE"><%= link_to 'Software Engineering', notes_class1Notes_path %></button>
-
+      <button id = 'button' name="SE"><%= link_to 'Software Engineering', notes_class1Notes_path %></button>
 </p>
 </section>
+    
 
 
 
