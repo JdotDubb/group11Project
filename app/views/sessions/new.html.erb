@@ -1,6 +1,6 @@
 <section>
     <p id="alert"><%= alert %></p>
-    <h1>cNotes - Login</h1>
+    <h1>Welcome back</h1>
     
     <%= form_tag sessions_path do |form| %>
     
@@ -21,4 +21,6 @@
 
     
     <% end %>
+    <button id = 'button' name='home'><%= link_to 'Back', notes_index_path %></button>
+    <br>
     </section>
