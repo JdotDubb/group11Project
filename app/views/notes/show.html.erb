@@ -23,6 +23,7 @@ bunch of text like a class' notes would be it seems ok. signed Zachary Martin---
   <p>
     <%= f.submit %>
   </p>
+  <button id= 'button' name="homealone"><%= link_to 'Back', notes_index_path %></button>
   </section>
   
   <section>
@@ -57,12 +58,13 @@ bunch of text like a class' notes would be it seems ok. signed Zachary Martin---
     
     <h2 id="register">Only registered users may make or read comments. Please sign up or login for full access!</h2>
     
-        <button id = 'button'><%= link_to "Sign Up!", signup_path %></button> or
+        <button id = 'button'><%= link_to "Sign Up", signup_path %></button>
         <button id = 'button'><%= link_to "Log In", login_path %></button>
-        
+        <button id = 'button'><%= link_to 'Home', notes_index_path %></button>
     <% end %>
+    <br>
 </section>
 <br>
-<button id= 'button' name="homealone"><%= link_to 'Home', notes_index_path %></button>
+
 
 

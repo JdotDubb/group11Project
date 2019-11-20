@@ -1,15 +1,15 @@
-<center><h1 id="idk">My dashboard</h1></center>
+<section>
+    <center><h1 id="idk">Add Note</h1></center>
 
-<center><div id="newNote">
+<center>
     <button id="addNote"><%= link_to '+', new_note_path %></button>
 <br>
-<strong id="something">Create Note</strong>
-</div>
 </center>
+</section>
 <br>
 <section>
 <h1>My Notes</h1>
-<div id="cente">
+<center>
     <table>
     <tr>
         <th id="text1">Title</th>
@@ -29,8 +29,8 @@
     <% end %>
     <% end %>
 </table>
-</div>
-</section>
+</center>
+
 <br>
 <br>
 <br>
@@ -38,7 +38,7 @@
 <br>
 <br>
 <button id= 'button' name="classsnotes"><%= link_to 'Class Notes', notes_class1Notes_path %></button>
-</div>
+</section>
 
 
 
