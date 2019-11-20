@@ -87,13 +87,31 @@ button:hover {
     font-size: 200px;
 }
 
-#buttonCRUD{
-    border-radius: 8px;
-    background-color: #f44336;
-    padding: 15px 15px;
-    text-align: center;
-    font-size: 16px;
-    color: white;
+#buttonCRUD {
+  background-color: #4CAF50; 
+  border: none;
+  color: #f44336;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+#buttonCRUD {
+  background-color: #f44336; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+#buttonCRUD:hover {
+  background-color: white;
+  color: #f44336;
 }
 
 
@@ -103,12 +121,6 @@ button:hover {
 
 #cent{
     text-align:center;
-    
-}
-
-#cente{
-    text-align:center;
-    left:400px;
     
 }
 
@@ -166,7 +178,6 @@ button:hover {
 
 [name=home]{
     position:relative;
-    right:-550px;
 }
 
 

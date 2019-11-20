@@ -3,21 +3,20 @@
 <center><h2>Class Notes</h2></center>
 <br>
 <br>
-    <div id="cente">
-    <table>
+    <center><table>
     <tr>
-        <th id="text1">Notes</th>
+        <th id="text1">Note Title</th>
     </tr>
     <% @notes.each  do |note| %>
     <tr>
         <td id="text2"><%= note.title %></td>
-        <td><div id="buttonCRUD"><%= link_to 'Show', note_path(note) %></div></td>
+        <td><div id="buttonCRUD"><%= link_to 'View', note_path(note) %></div></td>
     </tr>
     <% end %>
 <br>
 </table>
-</div>
-</section>
-<br>
-<button id = 'button' name='home'><%= link_to 'Home', notes_index_path %></button>
+</center>
 
+<br>
+<button id = 'button' name='home'><%= link_to 'Back', notes_index_path %></button>
+</section>
