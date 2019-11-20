@@ -1,10 +1,10 @@
 <!--Why is this page so wide now?---->
 <section>
 <h1 id="welcome">cNotes</h1>
+<h2><i>Share your class notes with other students</i></h2>
 <br>
 <br>
 <br>
-
     <% if current_user %>
     <div name="loggedIn">Hi, <%= current_user.name %>
     <br> 
@@ -17,16 +17,16 @@
     <button id = 'button' name="myDashboard"><%= link_to 'My Dashboard', notes_class1_path %></button>
     <br>
     <% else %>
-    <h2 id="register">Only registered users may make notes. Please sign up or login for full access!</h2>
-        <button id = 'button'><%= link_to "Sign Up!", signup_path %></button> or
+    <h2 id="register">Sign up or Login to share your notes...or</h2>
+        <button id = 'button'><%= link_to "Sign Up!", signup_path %></button> 
         <button id = 'button'><%= link_to "Log In", login_path %></button>
         
     <% end %>
     <br>
     <br>
-    
+    <p>---------------------------------------------</p>
 </p>
-      <h2 class="toCenter">Here are the classes available</h2>
+      <h2 class="toCenter">Available Classes</h2>
 
 <p>
 
