@@ -1,6 +1,6 @@
 <section>
-<center><h1>Software Engineering</h1></center>
-<center><h2>ITSC-3155</h2></center>
+<center><h1>Software Arch & Desiogn</h1></center>
+<center><h2>ITIS-3310</h2></center>
 <br>
 <br>
     <center><table>
@@ -8,7 +8,7 @@
         <th id="text1">Note Title</th>
     </tr>
     <% @notes.each do |note| %>
-    <% if note.course == 'ITSC3155' %>
+    <% if note.course == 'ITIS3310' %>
     <tr>
         <td id="text2"><%= note.title %></td>
         <td><div id="buttonCRUD"><%= link_to 'View', note_path(note) %></div></td>
