@@ -4,10 +4,10 @@
 <h2><i>Create and share notes with your class</i></h2>
 <br>
     <% if current_user %>
-    <div name="loggedIn">Hi, <%= current_user.name %>
+    <div name="loggedIn"><div id="hi">Hi, <%= current_user.name %></div>
     <br> 
     <br>
-    <button id = 'button'><%= link_to "Log Out", logout_path %></button></div><!--why is the layout of the text like that? The out should be on the same line as log-->
+    <button id = 'button' name="logoutButton"><%= link_to "Log Out", logout_path %></button></div><!--why is the layout of the text like that? The out should be on the same line as log-->
     <p>---------------------------------------------------------------</p>
     <br>
     <br>
