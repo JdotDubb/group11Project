@@ -8,6 +8,10 @@ class NotesController < ApplicationController
         @notes = Note.all
     end
 
+    def class2Notes
+        @notes = Note.all
+    end
+
     def show 
          @note = Note.find(params[:id])
     end
@@ -52,6 +56,6 @@ end
 
 private 
     def note_params
-        params.require(:note).permit(:title, :text)
+        params.require(:note).permit(:title, :course, :text)
 
     end

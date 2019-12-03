@@ -1,9 +1,8 @@
 <section>
-<h1>Create your account</h1>
+<h1>Lets get started</h1>
 
 <%= render 'form', user: @user %>
-
+<br>
+<button id = 'button' name='home'><%= link_to 'Back', notes_index_path %></button>
 </section>
-<br>
-<br>
-<button id = 'button' name='home'><%= link_to 'Home', notes_index_path %></button>
+

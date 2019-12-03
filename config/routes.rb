@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'notes/index' 
   get 'notes/class1'
   get 'notes/class1Notes'
+   get 'notes/class2Notes'
   
   resources :notes do
     resources :comments
