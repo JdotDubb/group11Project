@@ -7,7 +7,7 @@ bunch of text like a class' notes would be it seems ok. signed Zachary Martin---
   <%= @note.text %>
 </p>
 
-
+<%if current_user %>
 <section>
  <h2>Have feedback?</h2>
 <%= form_for([@note, @note.comments.build]) do |f| %>
