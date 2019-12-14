@@ -1,0 +1,44 @@
+<section>
+    <center><h1 id="idk">Add Note</h1></center>
+
+<center>
+    <button id="addNote"><%= link_to '+', new_note_path %></button>
+<br>
+</center>
+</section>
+<br>
+<section>
+<h1>My Notes</h1>
+<center>
+    <table>
+    <tr>
+        <th id="text1">Title</th>
+    </tr>
+    <% @notes.each do |note| %>
+    <% if note.user_id == current_user.id %>
+    <tr>
+        <td id="text2"><%= note.title %></td>
+        <td><div id="buttonCRUD"><%= link_to 'Show', note_path(note) %></div></td>
+        <td><div id="buttonCRUD"><%= link_to 'Edit', edit_note_path(note) %></div></td>
+        <td><div id="buttonCRUD"><%= link_to 'Delete', 
+                                    note_path(note),
+                                    method: :delete,
+                                    data: {confirm: 'Sure you want to toss it?'} %></div></td>
+        
+    </tr>
+    <% end %>
+    <% end %>
+</table>
+</center>
+
+<br>
+<br>
+<br>
+<button id= 'button' name="homealone"><%= link_to 'Home', notes_index_path %></button>
+<br>
+</section>
+
+
+
+
+

@@ -1,0 +1,33 @@
+<!--Why is this page so wide now?---->
+<section>
+<h1 id="welcome">cNotes</h1>
+<h2><i>Create and share notes with your class</i></h2>
+<br>
+    <% if current_user %>
+    <h3 class="toCenter">Hi, <%= current_user.name %></h3>
+    <button id = 'button' name="SE"><%= link_to "Log Out", logout_path %></button></div><!--why is the layout of the text like that? The out should be on the same line as log-->
+    <p>---------------------------------------------------------------</p>
+    
+    <h3 class="toCenter">Visit your dashboard for more</h3>
+    <p>
+    <button id = 'button' name="myDashboard"><%= link_to 'My Dashboard', notes_class1_path %></button>
+    <br>
+    <% else %>
+    <h3 id="register">Sign up or Login to share your notes</h3>
+        <button id = 'button'><%= link_to "Sign Up!", signup_path %></button> 
+        <button id = 'button'><%= link_to "Log In", login_path %></button>
+    <% end %>
+</p>
+
+<p>---------------------------------------------------------------</p>
+      <h3 class="toCenter">Available Classes</h3>
+      <button id = 'button' name="SE"><%= link_to 'ITSC-3155', notes_class1Notes_path %></button>
+    <button id = 'button' name="SE"><%= link_to 'ITIS-3310', notes_class2Notes_path %></button>
+
+</p>
+</section>
+    
+
+
+
+

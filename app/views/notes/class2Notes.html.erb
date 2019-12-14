@@ -1,0 +1,24 @@
+<section>
+<center><h1>Software Arch & Design</h1></center>
+<center><h2>ITIS-3310</h2></center>
+<br>
+<br>
+    <center><table>
+    <tr>
+        <th id="text1">Note Title</th>
+    </tr>
+    <% @notes.each do |note| %>
+    <% if note.course == 'ITIS3310' %>
+    <tr>
+        <td id="text2"><%= note.title %></td>
+        <td><div id="buttonCRUD"><%= link_to 'View', note_path(note) %></div></td>
+    </tr>
+    <% end %>
+    <% end %>
+<br>
+</table>
+</center>
+
+<br>
+<button id = 'button' name='home'><%= link_to 'Back', notes_index_path %></button>
+</section>

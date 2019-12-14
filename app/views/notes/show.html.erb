@@ -1,0 +1,65 @@
+  <h1 id="title">
+  <%= @note.title %>
+</h1>
+ 
+<p id="note"><!--I made the background of this white. It makes it look stupid with so little text, but if you imagine it with a whole
+bunch of text like a class' notes would be it seems ok. signed Zachary Martin--->
+  <%= @note.text %>
+</p>
+
+<%if current_user %>
+<section>
+ <h2>Have feedback?</h2>
+<%= form_for([@note, @note.comments.build]) do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :commenter %>
+  </p>
+  
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+  <% end %>
+  <button id= 'button' name="homealone"><%= link_to 'Back', notes_index_path %></button>
+  </section>
+  
+  <section>
+<h2>Collaborate</h2>
+<br>
+<% @note.comments.each do |comment| %>
+
+  <p>
+    <strong>User:</strong>
+    <%= comment.commenter %>
+  </p>
+ 
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+
+  <p>-----------------------------------</p>
+<% end %>
+</section>
+  
+      <% else %>
+    
+    <section>
+    <h2 id="register">Only registered users may make comments. Please sign up or login for full access!</h2>
+    
+        <button id = 'button'><%= link_to "Sign Up", signup_path %></button>
+        <button id = 'button'><%= link_to "Log In", login_path %></button>
+        <button id= 'button' name="homealone"><%= link_to 'Back', notes_index_path %></button>
+        </section>
+    <% end %>
+    
+
+
+
+
+
+

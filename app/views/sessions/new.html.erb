@@ -1,0 +1,26 @@
+<section>
+    <p id="alert"><%= alert %></p>
+    <h1>Welcome back</h1>
+    
+    <%= form_tag sessions_path do |form| %>
+    
+        <br>
+        <br>
+        <%= label_tag :email %>
+        <%= text_field_tag :email %>
+    
+        <br>
+        <br>
+        <%= label_tag :password %>
+        <%= password_field_tag :password %>
+
+        <br>
+        <br>
+        <%= submit_tag "Login!" %>
+
+
+    
+    <% end %>
+    <button id = 'button' name='home'><%= link_to 'Back', notes_index_path %></button>
+    <br>
+    </section>
